@@ -7,7 +7,7 @@ hostname = h5.ele.me
 [rewrite_local]
 
 #饿了么
-^https:\/\/h5\.ele\.me\/crossdomainstorage\.com url script-request-body https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
+^https:\/\/h5\.ele\.me\/crossdomainstorage\.html url script-request-body https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
 
 */
 
