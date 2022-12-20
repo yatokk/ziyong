@@ -15,7 +15,7 @@ hostname = h5.ele.me
 
 const $ = new Env("elmck")
 
-let cookie = $request.headers.Cookie
+let cookie = $request.headers['Cookie']
 
 let cookie2 = cookie.match(/(cookie2=[^;]*)/)[0]
 let SID = cookie.match(/(SID=[^;]*)/)[0]
