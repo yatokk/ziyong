@@ -9,7 +9,7 @@ hostname = h5.ele.me
 #elmck
 
 #饿了么
-^https:\/\/h5\.ele\.me\/crossdomainstorage url script-request-header https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
+^https:\/\/h5\.ele\.me url script-request-header https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
 
 */
 
