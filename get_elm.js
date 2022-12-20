@@ -6,8 +6,10 @@ hostname = h5.ele.me
 
 [rewrite_local]
 
+#elmck
+
 #饿了么
-^https:\/\/h5\.ele\.me\/crossdomainstorage\.html url script-request-header https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
+^https:\/\/h5\.ele\.me\/crossdomainstorage url script-request-header https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
 
 */
 
@@ -15,13 +17,8 @@ const $ = new Env("elmck")
 
 let cookie = $request.headers.Cookie
 
-$notify("1111111111", "", `${cookie};`);
-
-
-// let _m_h5_tk = cookie.match(/_m_h5_tk=[^;]*;/)
-// let _m_h5_tk_enc = cookie.match(/_m_h5_tk_enc=[^;]*;/)
-let cookie2 = cookie.match(/(cookie2=[^;]*)/)[1]
-let SID = cookie.match(/(SID=[^;]*)/)[1]
+let cookie2 = cookie.match(/(cookie2=[^;]*)/)[0]
+let SID = cookie.match(/(SID=[^;]*)/)[0]
 
 console.log('================')
 console.log(`${cookie2}${SID}`, "的cookie2和SID获取中！")
