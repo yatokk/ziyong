@@ -17,6 +17,10 @@ const $ = new Env("elmck")
 
 let cookie = $request.headers['Cookie']
 
+if(cookie){
+    $notify("获取不到", "", `${cookie}`);
+}
+
 let cookie2 = cookie.match(/(cookie2=[^;]*)/)[0]
 let SID = cookie.match(/(SID=[^;]*)/)[0]
 
