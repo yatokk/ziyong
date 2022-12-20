@@ -16,7 +16,7 @@ const $ = new Env("elmck")
 
 let cookie = $request.headers.Cookie
 
-console.log(`${cookie2}${SID}`)
+console.log(`${cookie}`)
 
 let _m_h5_tk = cookie.match(/_m_h5_tk=[^;]*;/)
 let _m_h5_tk_enc = cookie.match(/_m_h5_tk_enc=[^;]*;/)
