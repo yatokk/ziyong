@@ -19,8 +19,8 @@ console.log(`${cookie}`)
 
 // let _m_h5_tk = cookie.match(/_m_h5_tk=[^;]*;/)
 // let _m_h5_tk_enc = cookie.match(/_m_h5_tk_enc=[^;]*;/)
-let cookie2 = cookie.match(/cookie2=[^;]/)[1]
-let SID = cookie.match(/SID=[^;]/)[1]
+let cookie2 = cookie.match(/(cookie2=[^;]*)/)[1]
+let SID = cookie.match(/(SID=[^;]*)/)[1]
 
 console.log('================')
 console.log(`${cookie2}${SID}`, "的cookie2和SID获取中！")
