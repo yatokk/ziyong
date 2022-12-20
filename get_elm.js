@@ -1,6 +1,5 @@
 /*
-打开京东以后点击右上角信息标志，
-即可获取完整wskey，新旧版本京东通用
+饿了么
 
 [MITM]
 hostname = h5.ele.me
@@ -8,7 +7,7 @@ hostname = h5.ele.me
 [rewrite_local]
 
 #饿了么
-^https:\/\/h5\.ele\.me\/crossdomainstorage url script-request-body https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
+^https:\/\/h5\.ele\.me\/crossdomainstorage\.com url script-request-body https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
 
 */
 
