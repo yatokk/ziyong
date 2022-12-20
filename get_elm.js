@@ -1,23 +1,22 @@
-/*
-饿了么
-
-[MITM]
-hostname = h5.ele.me
-
-[rewrite_local]
-
-#elmck
-
-#饿了么
-^https:\/\/h5\.ele\.me url script-request-header https://raw.githubusercontent.com/yatokk/ziyong/main/get_elm.js
-
+/**
+* 饿了么
+* 
+* [MITM]
+* hostname = h5.ele.me
+* 
+* [rewrite_local]
+* ^https:\/\/h5\.ele\.me url script-request-header
 */
 
-const $ = new Env("elmck")
 
-let cookie = $request.headers['Cookie']
+//const $ = new Env("elmck")
 
-if(cookie){
+let head = $request.headers
+let cookie= JSON.stringify(head)
+
+//$notify("headers", "",`${JSON.stringify(cookie)}`);
+
+if(!cookie){
     $notify("获取不到", "", `${cookie}`);
 }
 
@@ -25,9 +24,9 @@ let cookie2 = cookie.match(/(cookie2=[^;]*)/)[0]
 let SID = cookie.match(/(SID=[^;]*)/)[0]
 
 console.log('================')
-console.log(`${cookie2}${SID}`, "的cookie2和SID获取中！")
+console.log(`${cookie2};${SID};`, "的cookie2和SID获取中！")
 
-$notify("点击复制cookie2和SID", "", `${cookie2};${SID};`);
+$notify("点击复制cookie2和SID", "",`${cookie2};${SID};`);
 
 
 function Env(t, e) {
