@@ -12,7 +12,7 @@ hostname = api-dd.jd.com
 
 
 # 京东
-^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog&loginType=4 url script-request-body https://raw.githubusercontent.com/LJMX996/jd/aaron/utils/get_jd_wskey.js
+^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog&loginType=4 url script-request-body https://raw.githubusercontent.com/yatokk/ziyong/main/get_jd_wskey.js
 
 
 */
