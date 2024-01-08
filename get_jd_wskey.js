@@ -22,7 +22,7 @@ const pin = respBody.userInfoSns.unickName;
 const key = WSKEY.match(/wskey=([^=;]+?);/)[1];
 
 
-$.msg("点击复制" + `${pin};` + "的wskey", "",`${pin};${wskey};`);
+$notify("点击复制" + `${pin};` + "的wskey", "",`${pin};${wskey};`);
 
 // $.bot_token = $.getdata('WSKEY_TG_BOT_TOKEN') || '';
 // $.chat_ids = $.getdata('WSKEY_TG_USER_ID') || [];
