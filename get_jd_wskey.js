@@ -18,16 +18,12 @@ const pin = respBody.userInfoSns.unickName;
 const key = WSKEY.match(/wskey=([^=;]+?);/)[1];
 
   !(async () => {
-    if (!pin || !key) {
-      $.msg('⚠️ WSKEY 获取失败');
-      $.done();
-    }
     const cookie = `wskey=${key};pt_pin=${pin};`;
     const userName = pin;
     const decodeName = decodeURIComponent(userName);
 
-    $.subt = "点击复制" + `${decodeName};` + "的wskey", "",`${cookie}`;
-    $.msg($.subt, cookie);
+    $notify(`点击复制${decodeName};的wskey ${cookie}`);
+
 
     return;
   })().catch((e) => $.logErr(e)).finally(() => $.done());
