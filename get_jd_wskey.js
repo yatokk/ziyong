@@ -99,6 +99,8 @@ $.autoUpload = "false";
       $.subt = `⚠️ 【${respBody?.userInfoSns?.petName || '提示'}】无需更新 WSKEY。`;
     }
   } else { // 本地使用
+    $notify(`点击复制${decodeName}的wskey \n ${cookie}`);
+
     $.subt = '🎉 WSKEY 获取成功。';
     $.msg($.subt, cookie);
   }
