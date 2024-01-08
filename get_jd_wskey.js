@@ -26,7 +26,6 @@ const key = WSKEY.match(/wskey=([^=;]+?);/)[1];
     $.log(`pin=======${pin}`);
     $.log(`key=======${key}`);
     $.log(`cookie=======${cookie}`);
-    $.log(`userName=======${userName}`);
     $.log(`decodeName=======${decodeName}`);
 
 
