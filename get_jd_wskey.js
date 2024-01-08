@@ -101,8 +101,8 @@ $.autoUpload = "false";
   } else { // 本地使用
     $notify(`点击复制${decodeName}的wskey \n ${cookie}`);
 
-    $.subt = '🎉 WSKEY 获取成功。';
-    $.msg($.subt, cookie);
+    //$.subt = '🎉 WSKEY 获取成功。';
+    //$.msg($.subt, cookie);
   }
   return;
 })().catch((e) => $.logErr(e)).finally(() => $.done());
