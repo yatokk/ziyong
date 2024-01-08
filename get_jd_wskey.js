@@ -22,7 +22,24 @@ const pin = respBody.userInfoSns.unickName;
 const key = WSKEY.match(/wskey=([^=;]+?);/)[1];
 
 
-$notify("点击复制" + `${pin};` + "的wskey", "",`${pin};${wskey};`);
+!(async () => {
+  if (!pin || !key) {
+    $.msg('⚠️ WSKEY 获取失败');
+    $.done();
+  }
+  const cookie = `wskey=${key};pt_pin=${pin};`;
+  const userName = pin;
+  const decodeName = decodeURIComponent(userName);
+  let cookiesData = JSON.parse($.getdata('wskeyList') || '[]');
+  let updateIndex;
+  const existCookie = cookiesData.find((item, index) => {
+    const ck = item.cookie;
+    const Account = ck ? ck.match(/pin=.+?;/) ? ck.match(/pin=(.+?);/)[1] : null : null;
+    const verify = userName === Account;
+    $notify("点击复制" + `${pin};` + "的wskey", "",`${cookie}`);
+  });
+}
+
 
 // $.bot_token = $.getdata('WSKEY_TG_BOT_TOKEN') || '';
 // $.chat_ids = $.getdata('WSKEY_TG_USER_ID') || [];
