@@ -22,6 +22,14 @@ const key = WSKEY.match(/wskey=([^=;]+?);/)[1];
     const userName = pin;
     const decodeName = decodeURIComponent(userName);
 
+    $.log(`WSKEY=======${WSKEY}`);
+    $.log(`pin=======${pin}`);
+    $.log(`key=======${key}`);
+    $.log(`cookie=======${cookie}`);
+    $.log(`userName=======${userName}`);
+    $.log(`decodeName=======${decodeName}`);
+
+
     $notify(`点击复制${decodeName};的wskey ${cookie}`);
 
 
